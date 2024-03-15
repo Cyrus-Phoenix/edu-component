@@ -112,7 +112,7 @@ EOF
 cd ~
 cd ws
 cd edu-components
-cat > ./src/components/atoms/LogoImage/LogoText.jsx << 'EOF'
+cat > ./src/components/atoms/LogoText/LogoText.jsx << 'EOF'
 import React from 'react';
 import styles from './LogoText.module.css';
 
@@ -175,7 +175,7 @@ EOF
 cd ~
 cd ws
 cd edu-components
-cat > ./src/components/molecules/CompanyLogo/CompanyLogo << 'EOF'
+cat > ./src/components/molecules/CompanyLogo/CompanyLogo.jsx << 'EOF'
 import React from 'react';
 import LogoImage from './LogoImage';
 import LogoText from './LogoText';

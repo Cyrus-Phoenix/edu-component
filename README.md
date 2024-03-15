@@ -7,6 +7,7 @@ cd ~
 cd ws
 git clone https://github.com/miwashi-edu/edu-components.git
 cd edu-components
+npm init
 mkdir ./src/components/atoms/LogoText/
 touch ./src/components/atoms/LogoText/LogoText.module.css
 touch ./src/components/atoms/LogoText/index.js
@@ -16,7 +17,12 @@ touch ./src/components/atoms/LogoImage/index.js
 mkdir ./src/components/molecules/CompanyLogo/
 touch ./src/components/molecules/CompanyLogo/CompanyLogo.module.css
 touch ./src/components/molecules/CompanyLogo/index.js
-code .
+```
+
+## Test it
+
+```bash
+npm start
 ```
 
 ## Files

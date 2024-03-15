@@ -126,13 +126,13 @@ export default LogoText;
 EOF
 ```
 
-### .src/stories/LogoText.stories.jsx
+### ./src/stories/LogoText.stories.jsx
 
 ```bash
 cd ~
 cd ws
 cd edu-components
-cat > .src/stories/LogoText.stories.jsx << 'EOF'
+cat > ./src/stories/LogoText.stories.jsx << 'EOF'
 import React from 'react';
 import LogoText from '../components/atoms/LogoText'; // Adjust the path as necessary
 
@@ -192,13 +192,13 @@ export default CompanyLogo;
 EOF
 ```
 
-### .src/stories/CompanyLogo.stories.jsx
+### ./src/stories/CompanyLogo.stories.jsx
 
 ```bash
 cd ~
 cd ws
 cd edu-components
-cat > .src/stories/CompanyLogo.stories.jsx << 'EOF'
+cat > ./src/stories/CompanyLogo.stories.jsx << 'EOF'
 import React from 'react';
 import LogoText from '../components/atoms/LogoText'; // Adjust the path as necessary
 

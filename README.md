@@ -24,11 +24,16 @@ code .
 ### ./src/index.js
 
 ```bash
+cd ~
+cd ws
+cd edu-components
+cat > ./src/index.js << 'EOF'
 import LogoImage from './components/atoms/LogoImage';
 import LogoText from './components/atoms/LogoText';
 import CompanyLogo from './components/molecules/CompanyLogo';
 
 export { LogoImage, LogoText, CompanyLogo };
+EOF
 ```
 
 

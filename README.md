@@ -134,7 +134,7 @@ cd ws
 cd edu-components
 cat > ./src/stories/LogoText.stories.jsx << 'EOF'
 import React from 'react';
-import LogoText from '../components/atoms/LogoText'; // Adjust the path as necessary
+import LogoText from '../components/atoms/LogoText';
 
 export default {
   title: 'Components/Atoms/LogoText',
@@ -200,7 +200,7 @@ cd ws
 cd edu-components
 cat > ./src/stories/CompanyLogo.stories.jsx << 'EOF'
 import React from 'react';
-import LogoText from '../components/atoms/LogoText'; // Adjust the path as necessary
+import LogoText from '../components/atoms/LogoText';
 
 export default {
   title: 'Components/Atoms/LogoText',

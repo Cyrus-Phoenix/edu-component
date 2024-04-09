@@ -1,6 +1,6 @@
 {
   "name": "@wacoco/edu-components",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "",
   "main": "dist/index.cjs.js,",
   "scripts": {

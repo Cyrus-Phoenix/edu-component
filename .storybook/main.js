@@ -16,5 +16,10 @@ const config = {
   docs: {
     autodocs: "tag",
   },
+  options: {
+    storySort: {
+      method: 'alphabetical',
+    },
+  },
 };
 export default config;

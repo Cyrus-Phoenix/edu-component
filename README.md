@@ -106,10 +106,12 @@ cd ~
 cd ws
 cd edu-components
 cat > ./src/components/atoms/LogoText/index.js << 'EOF'
-//for bundling
+//for bundling, Named export
+//import { LogoText } from '@wacoco/edu-components';
 export {default as LogoText} from "./LogoText"
 
-//for storybook
+//for storybook default export
+//import differentName from '@wacoco/edu-components';
 export {default} from "./LogoText"
 EOF
 ```
@@ -169,10 +171,12 @@ cd ~
 cd ws
 cd edu-components
 cat > ./src/components/molecules/CompanyLogo/index.js << 'EOF'
-//for bundling
+//for bundling, Named export
+//import { CompanyLogo } from '@wacoco/edu-components';
 export {default as CompanyLogo} from "./CompanyLogo"
 
-//for storybook
+//for storybook default export
+//import differentName from '@wacoco/edu-components';
 export {default} from "./CompanyLogo"
 EOF
 ```

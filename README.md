@@ -14,9 +14,9 @@ touch ./src/components/atoms/LogoTitle/index.js
 mkdir ./src/components/atoms/LogoImage/
 touch ./src/components/atoms/LogoImage/LogoImage.module.css
 touch ./src/components/atoms/LogoImage/index.js
-mkdir ./src/components/molecules/CompanyLogo/
-touch ./src/components/molecules/CompanyLogo/CompanyLogo.module.css
-touch ./src/components/molecules/CompanyLogo/index.js
+mkdir ./src/components/molecules/Logo/
+touch ./src/components/molecules/Logo/Logo.module.css
+touch ./src/components/molecules/Logo/index.js
 ```
 
 ## Test it
@@ -36,9 +36,9 @@ cd edu-components
 cat > ./src/index.js << 'EOF'
 import LogoImage from './components/atoms/LogoImage';
 import LogoTitle from './components/atoms/LogoTitle';
-import CompanyLogo from './components/molecules/CompanyLogo';
+import Logo from './components/molecules/Logo';
 
-export { LogoImage, LogoTitle, CompanyLogo };
+export { LogoImage, LogoTitle, Logo };
 EOF
 ```
 
@@ -193,58 +193,58 @@ Default.args = {
 EOF
 ```
 
-### ./src/components/atoms/CompanyLogo/index.js
+### ./src/components/atoms/Logo/index.js
 
 ```bash
 cd ~
 cd ws
 cd edu-components
-cat > ./src/components/molecules/CompanyLogo/index.js << 'EOF'
+cat > ./src/components/molecules/Logo/index.js << 'EOF'
 //for bundling, Named export
-//import { CompanyLogo } from '@wacoco/edu-components';
-export {default as CompanyLogo} from "./CompanyLogo"
+//import { Logo } from '@wacoco/edu-components';
+export {default as Logo} from "./Logo"
 
 //for storybook default export
 //import differentName from '@wacoco/edu-components';
-export {default} from "./CompanyLogo"
+export {default} from "./Logo"
 EOF
 ```
 
-### ./src/components/molecules/CompanyLogo/CompanyLogo.jsx
+### ./src/components/molecules/Logo/Logo.jsx
 
 ```bash
 cd ~
 cd ws
 cd edu-components
-cat > ./src/components/molecules/CompanyLogo/CompanyLogo.jsx << 'EOF'
+cat > ./src/components/molecules/Logo/Logo.jsx << 'EOF'
 import React from 'react';
 import LogoImage from './LogoImage';
 import LogoTitle from './LogoTitle';
-import styles from './CompanyLogo.module.css';
+import styles from './Logo.module.css';
 
-const CompanyLogo = ({ text }) => (
-  <div className={styles.companyLogo}>
+const Logo = ({ text }) => (
+  <div className={styles.Logo}>
     <LogoImage className={styles.logoImage} />
     <LogoTitle text={text} className={styles.LogoTitle} />
   </div>
 );
 
-export default CompanyLogo;
+export default Logo;
 EOF
 ```
 
-### ./src/stories/CompanyLogo.stories.jsx
+### ./src/stories/Logo.stories.jsx
 
 ```bash
 cd ~
 cd ws
 cd edu-components
-cat > ./src/stories/CompanyLogo.stories.jsx << 'EOF'
+cat > ./src/stories/Logo.stories.jsx << 'EOF'
 import React from 'react';
 import LogoTitle from '../components/atoms/LogoTitle';
 
 export default {
-  title: 'Components/Atoms/CompanyLogo',
+  title: 'Components/Atoms/Logo',
   component: LogoTitle,
   argTypes: {
     text: { control: 'text' },

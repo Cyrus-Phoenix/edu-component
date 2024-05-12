@@ -15,3 +15,7 @@ npm init
 ```bash
 npm start
 ```
+
+## Done
+
+[Compare with](https://github.com/miwashi-edu/edu-components-done)

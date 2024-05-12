@@ -99,6 +99,35 @@ export default LogoImage;
 EOF
 ```
 
+### ./src/stories/LogoImage.stories.jsx
+
+```bash
+cd ~
+cd ws
+cd edu-components
+cat > ./src/stories/LogoImage.stories.jsx << 'EOF'
+import React from 'react';
+import LogoImage from '../components/atoms/LogoImage';
+
+export default {
+    title: 'Components/Atoms/LogoImage',
+    component: LogoImage,
+    argTypes: {
+        className: { control: 'text' },
+    },
+};
+
+const Template = (args) => <LogoImage {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+    className: '',
+};
+EOF
+```
+
+
+
 ### ./src/components/atoms/LogoText/index.js
 
 ```bash

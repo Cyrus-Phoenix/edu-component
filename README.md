@@ -8,9 +8,9 @@ cd ws
 git clone https://github.com/miwashi-edu/edu-components.git
 cd edu-components
 npm init
-mkdir ./src/components/atoms/LogoText/
-touch ./src/components/atoms/LogoText/LogoText.module.css
-touch ./src/components/atoms/LogoText/index.js
+mkdir ./src/components/atoms/LogoTitle/
+touch ./src/components/atoms/LogoTitle/LogoTitle.module.css
+touch ./src/components/atoms/LogoTitle/index.js
 mkdir ./src/components/atoms/LogoImage/
 touch ./src/components/atoms/LogoImage/LogoImage.module.css
 touch ./src/components/atoms/LogoImage/index.js
@@ -35,10 +35,10 @@ cd ws
 cd edu-components
 cat > ./src/index.js << 'EOF'
 import LogoImage from './components/atoms/LogoImage';
-import LogoText from './components/atoms/LogoText';
+import LogoTitle from './components/atoms/LogoTitle';
 import CompanyLogo from './components/molecules/CompanyLogo';
 
-export { LogoImage, LogoText, CompanyLogo };
+export { LogoImage, LogoTitle, CompanyLogo };
 EOF
 ```
 
@@ -128,63 +128,63 @@ EOF
 
 
 
-### ./src/components/atoms/LogoText/index.js
+### ./src/components/atoms/LogoTitle/index.js
 
 ```bash
 cd ~
 cd ws
 cd edu-components
-cat > ./src/components/atoms/LogoText/index.js << 'EOF'
+cat > ./src/components/atoms/LogoTitle/index.js << 'EOF'
 //for bundling, Named export
-//import { LogoText } from '@wacoco/edu-components';
-export {default as LogoText} from "./LogoText"
+//import { LogoTitle } from '@wacoco/edu-components';
+export {default as LogoTitle} from "./LogoTitle"
 
 //for storybook default export
 //import differentName from '@wacoco/edu-components';
-export {default} from "./LogoText"
+export {default} from "./LogoTitle"
 EOF
 ```
 
-### ./src/components/atoms/LogoText/LogoText.jsx
+### ./src/components/atoms/LogoTitle/LogoTitle.jsx
 
 ```bash
 cd ~
 cd ws
 cd edu-components
-cat > ./src/components/atoms/LogoText/LogoText.jsx << 'EOF'
+cat > ./src/components/atoms/LogoTitle/LogoTitle.jsx << 'EOF'
 import React from 'react';
-import styles from './LogoText.module.css';
+import styles from './LogoTitle.module.css';
 
-const LogoText = ({ text, className = '' }) => (
+const LogoTitle = ({ text, className = '' }) => (
   <div className={`${styles.text} ${className}`}>
     {text}
   </div>
 );
 
-export default LogoText;
+export default LogoTitle;
 EOF
 ```
 
-### ./src/stories/LogoText.stories.jsx
+### ./src/stories/LogoTitle.stories.jsx
 
 ```bash
 cd ~
 cd ws
 cd edu-components
-cat > ./src/stories/LogoText.stories.jsx << 'EOF'
+cat > ./src/stories/LogoTitle.stories.jsx << 'EOF'
 import React from 'react';
-import LogoText from '../components/atoms/LogoText';
+import LogoTitle from '../components/atoms/LogoTitle';
 
 export default {
-  title: 'Components/Atoms/LogoText',
-  component: LogoText,
+  title: 'Components/Atoms/LogoTitle',
+  component: LogoTitle,
   argTypes: {
     text: { control: 'text' },
     className: { control: 'text' },
   },
 };
 
-const Template = (args) => <LogoText {...args} />;
+const Template = (args) => <LogoTitle {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
@@ -219,13 +219,13 @@ cd edu-components
 cat > ./src/components/molecules/CompanyLogo/CompanyLogo.jsx << 'EOF'
 import React from 'react';
 import LogoImage from './LogoImage';
-import LogoText from './LogoText';
+import LogoTitle from './LogoTitle';
 import styles from './CompanyLogo.module.css';
 
 const CompanyLogo = ({ text }) => (
   <div className={styles.companyLogo}>
     <LogoImage className={styles.logoImage} />
-    <LogoText text={text} className={styles.logoText} />
+    <LogoTitle text={text} className={styles.LogoTitle} />
   </div>
 );
 
@@ -241,18 +241,18 @@ cd ws
 cd edu-components
 cat > ./src/stories/CompanyLogo.stories.jsx << 'EOF'
 import React from 'react';
-import LogoText from '../components/atoms/LogoText';
+import LogoTitle from '../components/atoms/LogoTitle';
 
 export default {
   title: 'Components/Atoms/CompanyLogo',
-  component: LogoText,
+  component: LogoTitle,
   argTypes: {
     text: { control: 'text' },
     className: { control: 'text' },
   },
 };
 
-const Template = (args) => <LogoText {...args} />;
+const Template = (args) => <LogoTitle {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

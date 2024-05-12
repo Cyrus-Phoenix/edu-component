@@ -1,2 +1,2 @@
-import LogoImage from './components/atoms/LogoImage'; 
+import LogoImage from './components/atoms/LogoImage';
 export {LogoImage};

@@ -99,7 +99,8 @@ export default LogoImage;
 EOF
 ```
 
-### ./src/stories/LogoImage.stories.jsx
+### ./src/components/atoms/LogoTitle/index.js
+
 
 ```bash
 cd ~
@@ -130,10 +131,16 @@ EOF
 
 ### ./src/components/atoms/LogoTitle/index.js
 
-```bash
-cd ~
-cd ws
-cd edu-components
+cat > ./src/components/atoms/LogoTitle/index.js << 'EOF'
+//for bundling
+export {default as LogoTitle} from "./LogoTitle"
+
+//for storybook
+export {default} from "./LogoTitle"
+EOF
+```
+
+### ./src/components/atoms/LogoTitle/LogoTitle.jsx
 cat > ./src/components/atoms/LogoTitle/index.js << 'EOF'
 //for bundling, Named export
 //import { LogoTitle } from '@wacoco/edu-components';
@@ -188,7 +195,7 @@ const Template = (args) => <LogoTitle {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  text: 'Company Name',
+  text: 'Company LogoTitle',
 };
 EOF
 ```
@@ -200,12 +207,10 @@ cd ~
 cd ws
 cd edu-components
 cat > ./src/components/molecules/Logo/index.js << 'EOF'
-//for bundling, Named export
-//import { Logo } from '@wacoco/edu-components';
+//for bundling
 export {default as Logo} from "./Logo"
 
-//for storybook default export
-//import differentName from '@wacoco/edu-components';
+//for storybook
 export {default} from "./Logo"
 EOF
 ```
@@ -223,9 +228,9 @@ import LogoTitle from './LogoTitle';
 import styles from './Logo.module.css';
 
 const Logo = ({ text }) => (
-  <div className={styles.Logo}>
+  <div className={styles.companyLogo}>
     <LogoImage className={styles.logoImage} />
-    <LogoTitle text={text} className={styles.LogoTitle} />
+    <LogoTitle text={text} className={styles.logoText} />
   </div>
 );
 
@@ -244,7 +249,7 @@ import React from 'react';
 import LogoTitle from '../components/atoms/LogoTitle';
 
 export default {
-  title: 'Components/Atoms/Logo',
+  title: 'Components/Atoms/LogoTitle',
   component: LogoTitle,
   argTypes: {
     text: { control: 'text' },
@@ -256,7 +261,7 @@ const Template = (args) => <LogoTitle {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  text: 'Company Name',
+  text: 'Company LogoTitle',
 };
 EOF
 ```

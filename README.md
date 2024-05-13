@@ -8,6 +8,7 @@ cd ws
 git clone https://github.com/miwashi-edu/edu-components.git
 cd edu-components
 npm init
+npm i
 ```
 
 ## Test it

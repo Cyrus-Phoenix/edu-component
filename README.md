@@ -45,4 +45,6 @@ const Template = (args) => <LogoTitle {...args}></LogoTitle>;
 export const Default = Template.bind({});
 Default.args = {
 };
-``
+```
+
+

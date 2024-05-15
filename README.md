@@ -1,10 +1,9 @@
 # edu-components
 
 ## Instructions 
-
+When you're in the folder where you want your project to be in.
+Use these commands:
 ```bash
-cd ~
-cd ws
 git clone https://github.com/miwashi-edu/edu-components.git
 cd edu-components
 npm init
